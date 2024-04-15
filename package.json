@@ -1,0 +1,25 @@
+{
+  "name": "interstellar",
+  "version": "5.1.5",
+  "type": "module",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "format": "npx prettier . --write"
+  },
+  "author": "InterstellarNetwork",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@tomphttp/bare-server-node": "2.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
+  }
+}
