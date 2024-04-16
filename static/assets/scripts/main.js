@@ -23,7 +23,7 @@ var nav = document.querySelector('.fixed-nav-bar')
 if (nav) {
   var html = `
     <div class="fixed-nav-bar-container">
-      <a class="icon" href="/./"><img alt="nav" id="INImg" src="/assets/media/favicon/main.png"/></a>
+      <a class="icon" href="/./">Cosmic</a>
     </div>
     <div class="fixed-nav-bar-right">
       <a class="navbar-link" href="/./g"><i class="fa-solid fa-gamepad navbar-icon"></i><xn>Ga</xn><xn>mes</xn></a>
