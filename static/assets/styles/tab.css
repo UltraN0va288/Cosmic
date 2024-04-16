@@ -54,6 +54,22 @@ body {
   border-radius: 5px;
   margin-right: 0.5rem;
   transition: background-color 0.3s ease;
+  position: relative;
+}
+
+#add-tab::after {
+  content: '';
+  width: 110%;
+  height: 110%;
+  display: block;
+  background: linear-gradient(0deg,
+  #AF40FF, #5B42F3 50%, #00DDEB);
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: -1;
+  border-radius: 5px;
+  left: -5%;
 }
 
 #nav-button {
@@ -64,8 +80,24 @@ body {
   color: var(--text-color);
   border: none;
   border-radius: 5px;
-  margin-right: 0.5rem;
+  margin-right: 0.6rem;
   transition: background-color 0.3s ease;
+  position: relative;
+}
+
+#nav-button::after {
+  content: '';
+  width: 110%;
+  height: 110%;
+  display: block;
+  background: linear-gradient(0deg,
+  #AF40FF, #5B42F3 50%, #00DDEB);
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: -1;
+  border-radius: 5px;
+  left: -5%;
 }
 
 #nav-button:hover {
