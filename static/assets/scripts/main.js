@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
+window.localStorage.setItem('v4Particles', 'true')
+
 // Nav
 var nav = document.querySelector('.fixed-nav-bar')
 
