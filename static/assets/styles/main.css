@@ -163,7 +163,7 @@ body {
 }
 
 .fixed-nav-bar .icon:hover {
-  transform: translateY(-55%) scale(1.03);
+  transform: scale(1.1);
   font-weight: 800;
 }
 
@@ -175,14 +175,12 @@ body {
   font-family: 'Inter', sans-serif;
   cursor: pointer;
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 800;
   margin-left: 5px;
   font-style: normal;
   text-decoration: none;
   transition: all 0.2s ease;
-  height: 0.5vh;
-  width: 0.5vh;
-  top: 18%;
+  top: 25%;
 }
 
 .fixed-nav-bar-right {
@@ -197,6 +195,7 @@ body {
 }
 
 .fixed-nav-bar-right .navbar-link {
+  padding: auto;
   margin-left: 10px;
   text-transform: uppercase;
   font-size: 2.5vh;
@@ -305,6 +304,22 @@ img {
   padding-right: 10px;
   padding-top: 5px;
   margin: 0;
+  position: relative;
+}
+
+.column::after {
+  content: '';
+  width: 105%;
+  height: 103%;
+  background: linear-gradient(45deg,
+  #AF40FF, #5B42F3 50%, #00DDEB);
+  display: block;
+  position: absolute;
+  inset: 0;
+  left: -2.5%;
+  margin: auto;
+  z-index: -1;
+  border-radius: 5px;
 }
 
 .column img {
