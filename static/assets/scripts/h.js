@@ -169,7 +169,8 @@ let splashtext = [
   'Check out the settings page',
   '"Sigma`s only" -John Andrews',
   'W rizz',
-  'Subscribe to Vindooly'
+  'Subscribe to Vindooly',
+  'Fun fact: Munir`s forehead is the biggest thing on earth'
 ]
 
 document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
