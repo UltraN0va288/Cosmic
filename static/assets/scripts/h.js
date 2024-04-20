@@ -17,7 +17,7 @@ if (!inFrame && !navigator.userAgent.includes('Firefox')) {
     const link = doc.createElement('link')
 
     const name = localStorage.getItem('name') || 'Courses'
-    const icon = localStorage.getItem('icon') || '../media/schoology.png'
+    const icon = localStorage.getItem('icon') || 'Schoology'
 
     doc.title = name
     link.rel = 'icon'
