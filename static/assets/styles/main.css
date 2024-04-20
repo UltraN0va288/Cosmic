@@ -51,8 +51,9 @@ body {
 .search-container::after {
   content: '';
   position: absolute;
-  width: 53.5vw;
-  height: 11vh;
+  width: calc(50vw - 5px);
+  height: calc(5vh - 5px);
+  padding: 20px;
   display: block;
   inset: 0;
   margin: auto;
@@ -71,8 +72,9 @@ body {
 .search-container::before {
   content: '';
   position: absolute;
-  width: 53.5vw;
-  height: 11vh;
+  width: calc(50vw - 5px);
+  height: calc(5vh - 5px);
+  padding: 20px;
   display: block;
   inset: 0;
   margin: auto;
