@@ -637,6 +637,7 @@ select {
   background-size: 400%;
   animation: bg-move linear infinite 5s;
   background-clip: text;
+  filter: drop-shadow(0 0 2px #000);
 }
 
 @keyframes bg-move {
