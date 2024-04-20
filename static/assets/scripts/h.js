@@ -178,7 +178,8 @@ let splashtext = [
   'There`s a tree creating the oxygen you`re wasting. Go find it in the woods and apologize.',
   'If I set the bar lower I`d need a shovel',
   'You search biggest gyatt everytime you get the chance',
-  'I didn`t think it was possible for someone`s brain to decompose naturally while they`re alive but here you are proving me wrong.'
+  'I didn`t think it was possible for someone`s brain to decompose naturally while they`re alive but here you are proving me wrong.',
+  'If you see this you are gay'
 ]
 
 document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
