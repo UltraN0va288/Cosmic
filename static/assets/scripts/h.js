@@ -168,4 +168,4 @@ let splashtext = [
   'Go <a href="https://sites.google.com/g.risd.org/cosmic-prxy">Here</a> for the request form'
 ]
 
-document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
+document.getElementById('splash').innerHTML = splashtext[Math.floor(Math.random() * splashtext.length)]
