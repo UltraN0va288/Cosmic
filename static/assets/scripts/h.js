@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 let splashtext = [
   'Thanks for using the site',
   'Check out the settings page',
-  'Go to the link below for the request form sites.google.com/g.risd.org/cosmic-prxy'
+  'Make sure to star the Github Repo!'
 ]
 
 document.getElementById('splash').innerHTML = splashtext[Math.floor(Math.random() * splashtext.length)]
