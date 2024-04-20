@@ -285,7 +285,6 @@ body {
   background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
   background: 400%;
   color: #0000;
-  background-clip: text;
   animation: bg-move linear infinite 5s;
 }
 
