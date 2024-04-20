@@ -623,11 +623,24 @@ select {
 }
 
 #splash {
-  color: #fff;
+  color: #0000;
   margin-bottom: 1em;
   margin-top: -2em;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background-size: 400%;
+  animation: bg-move linear infinite 5s;
+  background-clip: text;
+}
+
+@keyframes bg-move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 400% 0;
+	}
 }
 
 #suggestions {
