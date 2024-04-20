@@ -286,6 +286,7 @@ body {
   background-size: 400%;
   color: #0000;
   animation: bg-move linear infinite 5s;
+  background-clip: text;
 }
 
 .navbar-icon {
