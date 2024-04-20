@@ -628,7 +628,7 @@ select {
   margin-top: -2em;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
   background-size: 400%;
   animation: bg-move linear infinite 5s;
   background-clip: text;
