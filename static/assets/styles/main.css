@@ -70,6 +70,8 @@ body {
   position: absolute;
   display: block;
   background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  inset: 0;
+  margin: auto;
 }
 
 .fixed-nav-bar-container {
