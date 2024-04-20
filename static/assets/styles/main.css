@@ -508,7 +508,12 @@ select {
   border-radius: 0px 0px 5px 5px;
   margin-top: 30vh;
   margin-bottom: 5vh;
-  text-shadow: 2px 4px 6px linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  /* text-shadow: 2px 4px 6px linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF); */
+  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  background-clip: text;
+  text-stroke: 6px transparent;
+  background-size: 400%;
+  animation: bg-move linear infinite 5s;
 }
 
 @media (orientation: portrait) {
