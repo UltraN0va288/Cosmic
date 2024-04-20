@@ -163,23 +163,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 })
 
 let splashtext = [
-  'Fuck you',
-  'You are gay',
   'Thanks for using the site',
   'Check out the settings page',
-  '"Sigma`s only" -John Andrews',
-  'W rizz',
-  'Subscribe to Vindooly',
-  'Fun fact: Munir`s forehead is the biggest thing on earth',
-  'Nahom is SPED',
-  'Fun fact: Munir`s forehead is larger than an olymic stadium',
-  'You look like an abortion gone wrong',
-  'I would tell you to go fuck yourself but I’m pretty sure you’d be disappointed.',
-  'There`s a tree creating the oxygen you`re wasting. Go find it in the woods and apologize.',
-  'If I set the bar lower I`d need a shovel',
-  'You search biggest gyatt everytime you get the chance',
-  'I didn`t think it was possible for someone`s brain to decompose naturally while they`re alive but here you are proving me wrong.',
-  'If you see this you are gay'
+  'Go <a href="https://sites.google.com/g.risd.org/cosmic-prxy">Here</a> for the request form'
 ]
 
 document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
