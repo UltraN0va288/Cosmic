@@ -546,7 +546,7 @@ select {
 
 .title {
   font-size: 10vh;
-  color: var(--title);
+  color: #000;
   font-family: 'Inter', sans-serif;
   text-align: center;
   text-transform: uppercase;
