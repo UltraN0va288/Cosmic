@@ -760,3 +760,55 @@ select {
   display: block;
   bottom: 0;
 }
+
+#trailer,
+#trailer2,
+#trailer3,
+#trailer4 {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+body:hover > #trailer, 
+body:hover > #trailer2, 
+body:hover > #trailer3, 
+body:hover > #trailer4 {
+  opacity: 1;
+}
+
+#trailer {
+  animation: bg-change 5s linear 0ms infinite;
+}
+#trailer2 {
+  animation: bg-change 5s linear 400ms infinite;
+}
+#trailer3 {
+  animation: bg-change 5s linear 800ms infinite;
+}
+#trailer4 {
+  animation: bg-change 5s linear 1200ms infinite;
+}
+
+@keyframes bg-change {
+  0% {
+    background: #AF40FF;
+  }
+  33% {
+    background: #5B42F3;
+  }
+  66% {
+    background: #00DDEB;
+  }
+  100% {
+    background: #AF40FF;
+  }
+}
