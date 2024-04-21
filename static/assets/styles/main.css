@@ -258,13 +258,16 @@ body {
   font-size: 30px;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
-  color: var(--text-primary);
+  color: #fff3;
   font-weight: 800;
   margin-left: 5px;
   font-style: normal;
   text-decoration: none;
   transition: all 0.2s ease;
   top: 25%;
+  background: linear-gradient(0deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  background-clip: text;
+  -webkit-text-stroke: 6px transparent;
 }
 
 .fixed-nav-bar-right {
