@@ -10,7 +10,7 @@ const input = document.getElementById('is')
 if (form && input) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault()
-    processUrl(input.value, '/p')
+    processUrl(input.value, '/ta')
   })
 }
 
@@ -38,7 +38,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, '/p')
+  processUrl(value, '/ta')
 }
 
 function blank(value) {
