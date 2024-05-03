@@ -12,6 +12,13 @@ body {
   background-attachment: fixed;
 }
 
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
 .fn {
   font-weight: normal;
 }
