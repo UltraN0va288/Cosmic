@@ -27,7 +27,7 @@
 
 You must run these commands on your server:  
 `git clone https://github.com/UltraN0va288/Cosmic`  
-`cd interstellar`  
+`cd Cosmic`  
 `npm install`  
 `npm start`
 
