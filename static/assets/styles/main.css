@@ -587,6 +587,25 @@ select {
   -webkit-text-stroke: 6px transparent;
   background-size: 400%;
   animation: bg-move linear infinite 5s;
+
+  &::after {
+    content: 'COSMIC';
+    background: linear-gradient(
+      45deg,
+      #AF40FF, 
+      #5B42F3 50%, 
+      #00DDEB
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: -1;
+    background-clip: text;
+    color: #0000;
+    filter: blur(20px);
+  }
 }
 
 @media (orientation: portrait) {
