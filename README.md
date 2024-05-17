@@ -1,6 +1,7 @@
 <div align="center">
     <h1>Cosmic</h1>
     <p>Cosmic is a web proxy with a Clean and Sleek UI and easy to use menus.</p>
+    <h2>Credit to InterstellarNetworks for the base and inspiration</h2>
 </div>
 
 > [!IMPORTANT]
