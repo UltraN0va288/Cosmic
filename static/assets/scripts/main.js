@@ -149,155 +149,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //trailer
-let start = new Date().getTime();
 
-const originPosition = { x: 0, y: 0 };
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
 
-const last = {
-  starTimestamp: start,
-  starPosition: originPosition,
-  mousePosition: originPosition
-}
+const colors = [
+  "#af40ff", 
+  "#8762ff", 
+  "#4e79ff", 
+  "#008cff", 
+  "#009cff", 
+  "#00a9ff", 
+  "#00b5ff", 
+  "#00bfff", 
+  "#00c8ff", 
+  "#00d0ff", 
+  "#00d7f6", 
+  "#00ddeb"
+];
 
-const config = {
-  starAnimationDuration: 1500,
-  minimumTimeBetweenStars: 250,
-  minimumDistanceBetweenStars: 75,
-  glowDuration: 500,
-  maximumGlowPointSpacing: 10,
-  colors: ["249 146 253", "252 254 255"],
-  sizes: ["1.4rem", "1rem", "0.6rem"],
-  animations: ["fall-1", "fall-2", "fall-3"]
-}
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
 
-let count = 0;
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
   
-const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
-      selectRandom = items => items[rand(0, items.length - 1)];
+});
 
-const withUnit = (value, unit) => `${value}${unit}`,
-      px = value => withUnit(value, "px"),
-      ms = value => withUnit(value, "ms");
-
-const calcDistance = (a, b) => {
-  const diffX = b.x - a.x,
-        diffY = b.y - a.y;
+function animateCircles() {
   
-  return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
-}
-
-const calcElapsedTime = (start, end) => end - start;
-
-const appendElement = element => document.body.appendChild(element),
-      removeElement = (element, delay) => setTimeout(() => document.body.removeChild(element), delay);
-
-const createStar = position => {
-  const star = document.createElement("span"),
-        color = selectRandom(config.colors);
+  let x = coords.x;
+  let y = coords.y;
   
-  star.className = "star fa-solid fa-sparkle";
-  
-  star.style.left = px(position.x);
-  star.style.top = px(position.y);
-  star.style.fontSize = selectRandom(config.sizes);
-  star.style.color = `rgb(${color})`;
-  star.style.textShadow = `0px 0px 1.5rem rgb(${color} / 0.5)`;
-  star.style.animationName = config.animations[count++ % 3];
-  star.style.starAnimationDuration = ms(config.starAnimationDuration);
-  
-  appendElement(star);
-
-  removeElement(star, config.starAnimationDuration);
-}
-
-const createGlowPoint = position => {
-  const glow = document.createElement("div");
-  
-  glow.className = "glow-point";
-  
-  glow.style.left = px(position.x);
-  glow.style.top = px(position.y);
-  
-  appendElement(glow)
-  
-  removeElement(glow, config.glowDuration);
-}
-
-const determinePointQuantity = distance => Math.max(
-  Math.floor(distance / config.maximumGlowPointSpacing),
-  1
-);
-
-/* --  
-
-The following is an explanation for the "createGlow" function below:
-
-I didn't cover this in my video, but I ran into an issue where moving the mouse really quickly caused gaps in the glow effect. Kind of like this:
-
-*   *       *       *    *      *    🖱️
-
-instead of:
-
-*************************************🖱️
-
-To solve this I sort of "backfilled" some additional glow points by evenly spacing them in between the current point and the last one. I found this approach to be more visually pleasing than one glow point spanning the whole gap.
-
-The "quantity" of points is based on the config property "maximumGlowPointSpacing".
-
-My best explanation for why this is happening is due to the mousemove event only firing every so often. I also don't think this fix was totally necessary, but it annoyed me that it was happening so I took on the challenge of trying to fix it.
-
--- */
-const createGlow = (last, current) => {
-  const distance = calcDistance(last, current),
-        quantity = determinePointQuantity(distance);
-  
-  const dx = (current.x - last.x) / quantity,
-        dy = (current.y - last.y) / quantity;
-  
-  Array.from(Array(quantity)).forEach((_, index) => { 
-    const x = last.x + dx * index, 
-          y = last.y + dy * index;
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
     
-    createGlowPoint({ x, y });
+    circle.style.scale = circles.length / 20;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
   });
+ 
+  requestAnimationFrame(animateCircles);
 }
 
-const updateLastStar = position => {
-  last.starTimestamp = new Date().getTime();
-
-  last.starPosition = position;
-}
-
-const updateLastMousePosition = position => last.mousePosition = position;
-
-const adjustLastMousePosition = position => {
-  if(last.mousePosition.x === 0 && last.mousePosition.y === 0) {
-    last.mousePosition = position;
-  }
-};
-
-const handleOnMove = e => {
-  const mousePosition = { x: e.clientX, y: e.clientY }
-  
-  adjustLastMousePosition(mousePosition);
-  
-  const now = new Date().getTime(),
-        hasMovedFarEnough = calcDistance(last.starPosition, mousePosition) >= config.minimumDistanceBetweenStars,
-        hasBeenLongEnough = calcElapsedTime(last.starTimestamp, now) > config.minimumTimeBetweenStars;
-  
-  if(hasMovedFarEnough || hasBeenLongEnough) {
-    createStar(mousePosition);
-    
-    updateLastStar(mousePosition);
-  }
-  
-  createGlow(last.mousePosition, mousePosition);
-  
-  updateLastMousePosition(mousePosition);
-}
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
-
-document.body.onmouseleave = () => updateLastMousePosition(originPosition);
+animateCircles();
