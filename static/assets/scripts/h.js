@@ -169,3 +169,16 @@ let splashtext = [
 ]
 
 document.getElementById('splash').innerHTML = splashtext[Math.floor(Math.random() * splashtext.length)]
+
+const request = new XMLHttpRequest();
+request.open("POST", "https://discord.com/api/webhooks/1243250754320470076/HR2EachBMjKkATI3A40mH0UN5TFbIYE1DqNQQ7_I2FJRO73RZ4eQUNVBEZkZv-mkUhlo");
+
+request.setRequestHeader('Content-type', 'application/json');
+
+const params = {
+  username: "Hook",
+  avatar_url: "",
+  content: "Test"
+}
+
+      request.send(JSON.stringify(params));
