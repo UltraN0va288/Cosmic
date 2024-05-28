@@ -291,7 +291,7 @@ a:visited {
   background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
   background-size: 400%;
   animation: bg-move linear infinite 5s;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
 }
 
@@ -359,7 +359,7 @@ a:visited {
   background-size: 400%;
   color: #0000;
   animation: bg-move linear infinite 5s;
-  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .navbar-icon {
@@ -583,7 +583,7 @@ select {
   margin-bottom: 5vh;
   /* text-shadow: 2px 4px 6px linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF); */
   background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
   background-size: 400%;
   animation: bg-move linear infinite 5s;
@@ -602,7 +602,7 @@ select {
     inset: 0;
     margin: auto;
     z-index: -1;
-    background-clip: text;
+    -webkit-background-clip: text;
     color: #0000;
     filter: blur(20px);
   }
@@ -733,7 +733,7 @@ select {
   background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
   background-size: 400%;
   animation: bg-move linear infinite 5s;
-  background-clip: text;
+  -webkit-background-clip: text;
   filter: drop-shadow(0 0 2px #000);
 }
 
