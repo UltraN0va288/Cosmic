@@ -13,6 +13,7 @@ if (nav) {
       <a class="navbar-link" href="/./ap"><i class="fa-solid fa-phone navbar-icon"></i><xn>Ap</xn><xn>ps</xn></a>
       <a class="navbar-link" href="/./t"><i class="fa-solid fa-laptop navbar-icon"></i><xn>Ta</xn><xn>bs</xn></a>
       <a class="navbar-link" href="/./s"><i class="fa-solid fa-gear navbar-icon settings-icon"></i><xn>Set</xn><xn>tings</xn></a>
+      <a class="navbar-link" href="/./emu"><i class="fa-solid fa-laptop navbar-icon"></i><xn>Emu</xn><xn>lator</xn></a>
     </div>`
   nav.innerHTML = html
 }
