@@ -155,17 +155,15 @@ const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
 const colors = [
-  "#af40ff", 
-  "#8762ff", 
-  "#4e79ff", 
-  "#008cff", 
-  "#009cff", 
-  "#00a9ff", 
-  "#00b5ff", 
-  "#00bfff", 
-  "#00c8ff", 
-  "#00d0ff", 
-  "#00d7f6", 
+  "#00ff3d", 
+  "#00f94e", 
+  "#00f35f", 
+  "#00ed71", 
+  "#00e782", 
+  "#00e194", 
+  "#00dbaa", 
+  "#00d5bb", 
+  "#00cfcd", 
   "#00ddeb"
 ];
 
