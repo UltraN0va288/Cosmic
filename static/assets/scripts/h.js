@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           },
         },
         color: {
-          value: ['#AF40FF', '#5B42F3', '#00DDEB'],
+          value: ['#00ff3d', '#00ffbb', '#00DDEB'],
         },
         shape: {
           type: 'circle',
