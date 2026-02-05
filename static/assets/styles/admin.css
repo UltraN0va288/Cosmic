@@ -1,0 +1,79 @@
+.admin-wrapper {
+  padding: 8rem 1.2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-login,
+.admin-panel {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.admin-login {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.admin-login input,
+.admin-login button,
+.inline-input,
+.admin-actions button,
+.admin-stat-card button {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(30, 41, 59, 0.85);
+  color: #e2e8f0;
+  padding: 0.6rem 0.7rem;
+}
+
+.admin-login button,
+.admin-actions button,
+.admin-stat-card button,
+.grant-btn {
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  border: none;
+  font-weight: 600;
+}
+
+.admin-top-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.admin-stat-card {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.table-shell {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.65rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.inline-controls {
+  display: grid;
+  grid-template-columns: 90px 90px 1fr;
+  gap: 0.4rem;
+}

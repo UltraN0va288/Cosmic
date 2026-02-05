@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,69 +6,135 @@
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
-    <title id="tab-title">Home</title>
-    <link rel="stylesheet" href="assets/styles/frame.css?v=8" />
+    <title id="tab-title">Proxy</title>
+    <link rel="stylesheet" href="assets/styles/frame.css?v=9" />
     <link rel="stylesheet" href="/assets/styles/themes/default.css?v=5" />
   </head>
   <body>
     <div class="nav-bar">
       <div class="nav-container">
         <div class="nav-left">
-          <button title="Home Page" id="home-page" class="nav-button" onclick="reload()">
+          <button
+            title="Home Page"
+            id="home-page"
+            class="nav-button"
+            onclick="reload()"
+          >
             <i class="fa-solid fa-house"></i>
           </button>
-          <button title="Back Arrow" id="nav-button" class="nav-button" onclick="goBack()">
+          <button title="Back Arrow" class="nav-button" onclick="goBack()">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
-          <button title="Forward Arrow" id="nav-button" class="nav-button" onclick="goForward()">
+          <button
+            title="Forward Arrow"
+            class="nav-button"
+            onclick="goForward()"
+          >
             <i class="fa-solid fa-arrow-right"></i>
           </button>
           <button title="Reload" onclick="reload()" class="nav-button">
             <i class="fa-solid fa-rotate-right"></i>
           </button>
           <form id="fs" class="navpost" method="POST">
-            <input id="is" class="navsearch" placeholder="Search or enter a new URL" type="text" />
+            <input
+              id="is"
+              class="navsearch"
+              placeholder="Search or enter a new URL"
+              type="text"
+            />
           </form>
         </div>
         <div class="nav-right">
-          <button title="Fullscreen" id="fullscreen-button" class="nav-button nav-btn-right">
+          <button
+            title="Tap 5x to unlock"
+            id="unlock-logo"
+            class="nav-button nav-btn-right"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+          </button>
+          <button
+            title="Fullscreen"
+            id="fullscreen-button"
+            class="nav-button nav-btn-right"
+          >
             <i class="fa-solid fa-expand"></i>
           </button>
-          <button title="Window Popout" id="popout-button" class="nav-button nav-btn-right" onclick="popout()">
-            <i class="fa-solid fa-solid fa-window-restore"></i>
+          <button
+            title="Window Popout"
+            id="popout-button"
+            class="nav-button nav-btn-right"
+            onclick="popout()"
+          >
+            <i class="fa-solid fa-window-restore"></i>
           </button>
-          <button title="Inspect" id="eruda-button" class="nav-button nav-btn-right" onclick="erudaToggle()">
+          <button
+            title="Inspect"
+            id="eruda-button"
+            class="nav-button nav-btn-right"
+            onclick="erudaToggle()"
+          >
             <i class="fa-solid fa-code"></i>
           </button>
         </div>
       </div>
     </div>
-    <div class="overlay">
-      <h1>Now.gg fix is being applied, please wait.</h1>
-      <p>
-        It should only take 1-2 minutes, if it takes longer
-        <a href="https://support.google.com/accounts/answer/32050">clear your cache</a> or join our
-      </p>
+
+    <div id="access-overlay" class="access-overlay">
+      <div class="access-card">
+        <h2>Protected Proxy Access</h2>
+        <p>
+          Tap the graduation logo in the top-right 5 times, then enter your user
+          PIN to continue.
+        </p>
+        <p id="credit-status">Checking your device credit…</p>
+        <button id="request-time" class="access-action">Request Time</button>
+      </div>
     </div>
+
+    <div id="pin-modal" class="pin-modal hidden">
+      <div class="pin-card">
+        <h3>Enter User PIN</h3>
+        <input
+          id="user-pin-input"
+          type="password"
+          maxlength="8"
+          placeholder="PIN"
+        />
+        <div class="pin-actions">
+          <button id="pin-cancel" class="access-action secondary">
+            Cancel
+          </button>
+          <button id="pin-submit" class="access-action">Unlock</button>
+        </div>
+      </div>
+    </div>
+
     <iframe
       src=""
       id="ifra"
       onload="iframeLoad()"
-      style="border: 0px #ffffff none"
+      style="border: 0"
       name="Iframe"
       title="Iframe"
       scrolling="yes"
       frameborder="0"
-      marginheight="0px"
-      marginwidth="0px"
+      marginheight="0"
+      marginwidth="0"
       height="100%"
       width="100%"
-      allowfullscreen></iframe>
+      allowfullscreen
+    ></iframe>
+
     <script src="assets/scripts/index.js?v=14"></script>
     <script src="/assets/scripts/main.js?v=31"></script>
+    <script src="/assets/scripts/access-control.js?v=1"></script>
     <script src="./m/bundle.js?v=5"></script>
     <script src="./m/config.js?v=5"></script>
     <script src="assets/scripts/frame.js?v=36"></script>
-    <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
+    <script src="assets/scripts/access-gate.js?v=1"></script>
+    <script
+      src="https://kit.fontawesome.com/1237c86ba0.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

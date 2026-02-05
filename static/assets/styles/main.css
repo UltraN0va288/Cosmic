@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   background: var(--page);
   height: 100%;
@@ -29,7 +29,7 @@ a:visited {
   align-items: center;
 }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
   width: 12px;
   background-color: black;
 }
@@ -43,12 +43,7 @@ a:visited {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(
-    45deg,
-    #00ff3d, 
-    #5B42F3 50%, 
-    #00DDEB
-  );
+  background: linear-gradient(45deg, #00ff3d, #5b42f3 50%, #00ddeb);
 }
 
 .countdown {
@@ -72,7 +67,7 @@ a:visited {
 }
 
 .search-container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: calc(50vw - 5px);
   height: calc(5vh - 5px);
@@ -80,20 +75,21 @@ a:visited {
   display: block;
   inset: 0;
   margin: auto;
-  background: linear-gradient(45deg, #00ff3d, #24fb68 33%, #00DDEB 66%, #00ff3d) border-box;
+  background: linear-gradient(45deg, #00ff3d, #24fb68 33%, #00ddeb 66%, #00ff3d)
+    border-box;
   background-size: 400%;
   z-index: -1;
   border-radius: 5px;
   border: 7px #0000 solid;
   animation: bg-move 5s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
 }
 
 .search-container::before {
-  content: '';
+  content: "";
   position: absolute;
   width: calc(50vw - 5px);
   height: calc(5vh - 5px);
@@ -101,14 +97,15 @@ a:visited {
   display: block;
   inset: 0;
   margin: auto;
-  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d) border-box;
+  background: linear-gradient(45deg, #00ff3d, #5b42f3 33%, #00ddeb 66%, #00ff3d)
+    border-box;
   background-size: 400%;
   z-index: -1;
   border-radius: 5px;
   border: 10px #0000 solid;
   animation: bg-move 5s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   filter: blur(10px);
@@ -122,7 +119,7 @@ a:visited {
 .main-search {
   width: 50vw;
   height: 5vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.3);
@@ -157,7 +154,7 @@ a:visited {
   color: var(--text-primary);
   text-align: center;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .lower-footer > h1 > a {
@@ -165,7 +162,7 @@ a:visited {
   color: var(--text-primary);
   margin-right: 1vw;
   margin-left: 1vw;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .featured {
@@ -231,25 +228,24 @@ a:visited {
 }
 
 .fixed-nav-bar::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0;
   margin: auto;
-  background: linear-gradient(0deg,
-  #00ff3d, #5B42F3 50%, #00DDEB) border-box;
+  background: linear-gradient(0deg, #00ff3d, #5b42f3 50%, #00ddeb) border-box;
   border: solid 5px #0000;
   border-radius: 10px;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
 }
 
 .fixed-nav-bar::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -257,12 +253,11 @@ a:visited {
   inset: 0;
   left: -4px;
   margin: auto;
-  background: linear-gradient(0deg,
-  #00ff3d, #5B42F3 50%, #00DDEB) border-box;
+  background: linear-gradient(0deg, #00ff3d, #5b42f3 50%, #00ddeb) border-box;
   border: solid 8px #0000;
   border-radius: 10px;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   filter: blur(50px);
@@ -279,7 +274,7 @@ a:visited {
   float: left;
   text-transform: uppercase;
   font-size: 30px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
   color: #000;
   font-weight: 800;
@@ -288,7 +283,13 @@ a:visited {
   text-decoration: none;
   transition: all 0.2s ease;
   top: 25%;
-  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
+  background: linear-gradient(
+    45deg,
+    #00ff3d,
+    #5b42f3 33%,
+    #00ddeb 66%,
+    #00ff3d
+  );
   background-size: 400%;
   animation: bg-move linear infinite 5s;
   -webkit-background-clip: text;
@@ -315,7 +316,7 @@ a:visited {
   color: var(--text-primary);
   font-weight: 800;
   right: 2%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -330,7 +331,7 @@ a:visited {
     color: var(--text-primary);
     font-weight: 800;
     right: 2%;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -340,7 +341,7 @@ a:visited {
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 800;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-size: 3vw;
     transform: translateX(-20%);
@@ -351,11 +352,17 @@ a:visited {
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 800;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 3vh;
   transform: translateX(-20%);
-  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
+  background: linear-gradient(
+    45deg,
+    #00ff3d,
+    #5b42f3 33%,
+    #00ddeb 66%,
+    #00ff3d
+  );
   background-size: 400%;
   color: #0000;
   animation: bg-move linear infinite 5s;
@@ -382,10 +389,10 @@ a:visited {
 
 .material-symbols-outlined {
   font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48;
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 48;
 }
 
 .navbar-link:hover > .settings-icon {
@@ -425,11 +432,15 @@ img {
 }
 
 .column::after {
-  content: '';
+  content: "";
   width: 105%;
   height: 103%;
-  background: linear-gradient(var(--gradient-angle),
-  #00ff3d, #5B42F3 50%, #00DDEB);
+  background: linear-gradient(
+    var(--gradient-angle),
+    #00ff3d,
+    #5b42f3 50%,
+    #00ddeb
+  );
   display: block;
   position: absolute;
   inset: 0;
@@ -445,12 +456,16 @@ img {
 }
 
 .column::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   display: block;
-  background: linear-gradient(var(--gradient-angle),
-  #00ff3d, #5B42F3 50%, #00DDEB);
+  background: linear-gradient(
+    var(--gradient-angle),
+    #00ff3d,
+    #5b42f3 50%,
+    #00ddeb
+  );
   position: absolute;
   z-index: -3;
   border-radius: 5px;
@@ -461,9 +476,9 @@ img {
 }
 
 @property --gradient-angle {
-	inherits: false;
-	initial-value: 0deg;
-	syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
 }
 
 @keyframes gradient-spin {
@@ -495,7 +510,7 @@ img {
   padding-bottom: 12px;
   background-size: auto;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     margin: auto;
@@ -529,7 +544,7 @@ input {
   padding: 20px;
   width: 550px;
   border-radius: 5px;
-  background: var(--background-secondary);  
+  background: var(--background-secondary);
   text-align: center;
   font-size: 24px;
   border: none;
@@ -575,26 +590,27 @@ select {
 .title {
   font-size: 10vh;
   color: #000;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-align: center;
   text-transform: uppercase;
   border-radius: 0px 0px 5px 5px;
   margin-top: 30vh;
   margin-bottom: 5vh;
-  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
+  background: linear-gradient(
+    45deg,
+    #00ff3d,
+    #5b42f3 33%,
+    #00ddeb 66%,
+    #00ff3d
+  );
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
   background-size: 400%;
   animation: bg-move linear infinite 5s;
 
   &::after {
-    content: 'COOOL';
-    background: linear-gradient(
-      45deg,
-      #00ff3d, 
-      #5B42F3 50%, 
-      #00DDEB
-    );
+    content: "COOOL";
+    background: linear-gradient(45deg, #00ff3d, #5b42f3 50%, #00ddeb);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -613,7 +629,7 @@ select {
     top: -10vw;
     font-size: 10vw;
     color: white;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     text-align: center;
     text-transform: uppercase;
     border-radius: 0px 0px 5px 5px;
@@ -626,7 +642,7 @@ select {
   font-size: 35px;
   color: snow;
   font-weight: bold;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-align: center;
   border-radius: 0px 0px 5px 5px;
   transition: transform 0.2s;
@@ -635,7 +651,7 @@ select {
 
 .main {
   letter-spacing: 0px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -694,32 +710,32 @@ select {
 }
 
 #geforce {
-  background: url('../media/icons/gfn.png');
+  background: url("../media/icons/gfn.png");
   background-size: cover;
 }
 
 #roblox {
-  background: url('../media/icons/roblox.png');
+  background: url("../media/icons/roblox.png");
   background-size: cover;
 }
 
 #discord {
-  background: url('../media/icons/discord.jpg');
+  background: url("../media/icons/discord.jpg");
   background-size: cover;
 }
 
 #eagler {
-  background: url('../media/icons/mc.webp');
+  background: url("../media/icons/mc.webp");
   background-size: cover;
 }
 
 #youtube {
-  background: url('../media/icons/youtube.png');
+  background: url("../media/icons/youtube.png");
   background-size: cover;
 }
 
 #tiktok {
-  background: url('../media/icons/tiktok.png');
+  background: url("../media/icons/tiktok.png");
   background-size: cover;
 }
 
@@ -728,8 +744,14 @@ select {
   margin-bottom: 1em;
   margin-top: -2em;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    45deg,
+    #00ff3d,
+    #5b42f3 33%,
+    #00ddeb 66%,
+    #00ff3d
+  );
   background-size: 400%;
   animation: bg-move linear infinite 5s;
   -webkit-background-clip: text;
@@ -737,12 +759,12 @@ select {
 }
 
 @keyframes bg-move {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 400% 0;
-	}
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
 }
 
 #suggestions {
@@ -770,7 +792,7 @@ select {
   padding-left: 5px;
   border-radius: 5px;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
   background: var(--background-secondary);
   -webkit-backdrop-filter: var(--background-filter);
@@ -807,7 +829,7 @@ select {
   width: 24px;
   border-radius: 24px;
   background-color: black;
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -818,4 +840,48 @@ select {
 
 body:hover > .circle {
   opacity: 1;
+}
+
+/* Modern refresh */
+body {
+  background: radial-gradient(circle at top, #172554 0%, #020617 58%);
+  color: #e2e8f0;
+}
+
+.fixed-nav-bar {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(14px);
+  border-radius: 14px;
+}
+
+.fixed-nav-bar::before,
+.fixed-nav-bar::after {
+  display: none;
+}
+
+.icon,
+.navbar-link {
+  color: #e2e8f0 !important;
+}
+
+.main {
+  background: rgba(15, 23, 42, 0.58);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 25px 60px rgba(2, 6, 23, 0.38);
+}
+
+.main-search {
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.75);
+  color: #e2e8f0;
+  padding: 0.4rem 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin-bottom: 0.8rem;
 }

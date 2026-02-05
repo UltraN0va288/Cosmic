@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+    <title id="tab-title">Admin Panel</title>
+    <link rel="stylesheet" href="/assets/styles/main.css?v=9" />
+    <link rel="stylesheet" href="/assets/styles/admin.css?v=1" />
+    <link rel="stylesheet" href="/assets/styles/themes/default.css?v=5" />
+    <script
+      src="https://kit.fontawesome.com/1237c86ba0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="fixed-nav-bar"></div>
+    <main class="admin-wrapper">
+      <section class="admin-login" id="admin-login-card">
+        <h1>Admin Access</h1>
+        <p>Enter admin PIN to manage device credits.</p>
+        <input type="password" id="admin-pin" placeholder="Admin PIN" />
+        <button id="admin-unlock">Unlock Panel</button>
+      </section>
+
+      <section class="admin-panel hidden" id="admin-panel">
+        <div class="admin-top-grid">
+          <article class="admin-stat-card">
+            <p>Total Revenue</p>
+            <h2 id="revenue-value">$0.00</h2>
+          </article>
+          <article class="admin-stat-card">
+            <p>Open Access</p>
+            <h2 id="open-access-state">OFF</h2>
+            <button id="toggle-open-access">Toggle</button>
+          </article>
+          <article class="admin-stat-card">
+            <p>Devices</p>
+            <h2 id="device-count">0</h2>
+          </article>
+        </div>
+
+        <div class="admin-actions">
+          <button id="refresh-admin">Refresh</button>
+        </div>
+
+        <div class="table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Fingerprint</th>
+                <th>Credit</th>
+                <th>Requests</th>
+                <th>Grant Time</th>
+              </tr>
+            </thead>
+            <tbody id="device-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/scripts/main.js?v=31"></script>
+    <script src="/assets/scripts/access-control.js?v=1"></script>
+    <script src="/assets/scripts/admin.js?v=1"></script>
+  </body>
+</html>
