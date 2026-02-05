@@ -589,7 +589,7 @@ select {
   animation: bg-move linear infinite 5s;
 
   &::after {
-    content: 'COSMIC';
+    content: 'COOOL';
     background: linear-gradient(
       45deg,
       #AF40FF, 
