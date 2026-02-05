@@ -101,7 +101,7 @@ a:visited {
   display: block;
   inset: 0;
   margin: auto;
-  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF) border-box;
+  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d) border-box;
   background-size: 400%;
   z-index: -1;
   border-radius: 5px;
@@ -239,7 +239,7 @@ a:visited {
   inset: 0;
   margin: auto;
   background: linear-gradient(0deg,
-  #AF40FF, #5B42F3 50%, #00DDEB) border-box;
+  #00ff3d, #5B42F3 50%, #00DDEB) border-box;
   border: solid 5px #0000;
   border-radius: 10px;
   -webkit-mask: 
@@ -258,7 +258,7 @@ a:visited {
   left: -4px;
   margin: auto;
   background: linear-gradient(0deg,
-  #AF40FF, #5B42F3 50%, #00DDEB) border-box;
+  #00ff3d, #5B42F3 50%, #00DDEB) border-box;
   border: solid 8px #0000;
   border-radius: 10px;
   -webkit-mask: 
@@ -288,7 +288,7 @@ a:visited {
   text-decoration: none;
   transition: all 0.2s ease;
   top: 25%;
-  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
   background-size: 400%;
   animation: bg-move linear infinite 5s;
   -webkit-background-clip: text;
@@ -355,7 +355,7 @@ a:visited {
   font-style: normal;
   font-size: 3vh;
   transform: translateX(-20%);
-  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
   background-size: 400%;
   color: #0000;
   animation: bg-move linear infinite 5s;
@@ -429,7 +429,7 @@ img {
   width: 105%;
   height: 103%;
   background: linear-gradient(var(--gradient-angle),
-  #AF40FF, #5B42F3 50%, #00DDEB);
+  #00ff3d, #5B42F3 50%, #00DDEB);
   display: block;
   position: absolute;
   inset: 0;
@@ -450,7 +450,7 @@ img {
   height: 100%;
   display: block;
   background: linear-gradient(var(--gradient-angle),
-  #AF40FF, #5B42F3 50%, #00DDEB);
+  #00ff3d, #5B42F3 50%, #00DDEB);
   position: absolute;
   z-index: -3;
   border-radius: 5px;
@@ -581,8 +581,7 @@ select {
   border-radius: 0px 0px 5px 5px;
   margin-top: 30vh;
   margin-bottom: 5vh;
-  /* text-shadow: 2px 4px 6px linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF); */
-  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
   background-size: 400%;
@@ -592,7 +591,7 @@ select {
     content: 'COOOL';
     background: linear-gradient(
       45deg,
-      #AF40FF, 
+      #00ff3d, 
       #5B42F3 50%, 
       #00DDEB
     );
@@ -730,7 +729,7 @@ select {
   margin-top: -2em;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, #AF40FF, #5B42F3 33%, #00DDEB 66%, #AF40FF);
+  background: linear-gradient(45deg, #00ff3d, #5B42F3 33%, #00DDEB 66%, #00ff3d);
   background-size: 400%;
   animation: bg-move linear infinite 5s;
   -webkit-background-clip: text;

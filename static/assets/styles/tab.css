@@ -63,7 +63,7 @@ body {
   height: 110%;
   display: block;
   background: linear-gradient(0deg,
-  #AF40FF, #5B42F3 50%, #00DDEB);
+  #00ff3d, #5B42F3 50%, #00DDEB);
   position: absolute;
   inset: 0;
   margin: auto;
@@ -91,7 +91,7 @@ body {
   height: 110%;
   display: block;
   background: linear-gradient(0deg,
-  #AF40FF, #5B42F3 50%, #00DDEB);
+  #00ff3d, #5B42F3 50%, #00DDEB);
   position: absolute;
   inset: 0;
   margin: auto;
